@@ -1,0 +1,80 @@
+[1mdiff --git a/FitnessApi/bin/.mvn/wrapper/MavenWrapperDownloader.class b/FitnessApi/bin/.mvn/wrapper/MavenWrapperDownloader.class[m
+[1mindex 1331bd1..f732311 100644[m
+Binary files a/FitnessApi/bin/.mvn/wrapper/MavenWrapperDownloader.class and b/FitnessApi/bin/.mvn/wrapper/MavenWrapperDownloader.class differ
+[1mdiff --git a/FitnessApi/bin/.project b/FitnessApi/bin/.project[m
+[1mindex 4b584e1..739a3eb 100644[m
+[1m--- a/FitnessApi/bin/.project[m
+[1m+++ b/FitnessApi/bin/.project[m
+[36m@@ -10,6 +10,11 @@[m
+ 			<arguments>[m
+ 			</arguments>[m
+ 		</buildCommand>[m
+[32m+[m		[32m<buildCommand>[m[41m[m
+[32m+[m			[32m<name>org.springframework.ide.eclipse.boot.validation.springbootbuilder</name>[m[41m[m
+[32m+[m			[32m<arguments>[m[41m[m
+[32m+[m			[32m</arguments>[m[41m[m
+[32m+[m		[32m</buildCommand>[m[41m[m
+ 		<buildCommand>[m
+ 			<name>org.eclipse.m2e.core.maven2Builder</name>[m
+ 			<arguments>[m
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/BearsApiApplication.class b/FitnessApi/bin/src/main/java/com/revature/BearsApiApplication.class[m
+[1mdeleted file mode 100644[m
+[1mindex e0b48d9..0000000[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/BearsApiApplication.class and /dev/null differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/configuration/WebConfig.class b/FitnessApi/bin/src/main/java/com/revature/configuration/WebConfig.class[m
+[1mindex cae31bf..088993a 100644[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/configuration/WebConfig.class and b/FitnessApi/bin/src/main/java/com/revature/configuration/WebConfig.class differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/controllers/BearController.class b/FitnessApi/bin/src/main/java/com/revature/controllers/BearController.class[m
+[1mdeleted file mode 100644[m
+[1mindex d9fed14..0000000[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/controllers/BearController.class and /dev/null differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/controllers/UserController.class b/FitnessApi/bin/src/main/java/com/revature/controllers/UserController.class[m
+[1mindex 32ac7ba..d755ea4 100644[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/controllers/UserController.class and b/FitnessApi/bin/src/main/java/com/revature/controllers/UserController.class differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/model/AppUser.class b/FitnessApi/bin/src/main/java/com/revature/model/AppUser.class[m
+[1mindex 48741b1..547fada 100644[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/model/AppUser.class and b/FitnessApi/bin/src/main/java/com/revature/model/AppUser.class differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/model/Bear.class b/FitnessApi/bin/src/main/java/com/revature/model/Bear.class[m
+[1mdeleted file mode 100644[m
+[1mindex cdbd967..0000000[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/model/Bear.class and /dev/null differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/model/Cave.class b/FitnessApi/bin/src/main/java/com/revature/model/Cave.class[m
+[1mdeleted file mode 100644[m
+[1mindex b09e0b8..0000000[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/model/Cave.class and /dev/null differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/repos/BearRepo.class b/FitnessApi/bin/src/main/java/com/revature/repos/BearRepo.class[m
+[1mdeleted file mode 100644[m
+[1mindex 36bb169..0000000[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/repos/BearRepo.class and /dev/null differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/services/BearService.class b/FitnessApi/bin/src/main/java/com/revature/services/BearService.class[m
+[1mdeleted file mode 100644[m
+[1mindex 0ed11be..0000000[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/services/BearService.class and /dev/null differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/services/BearServiceImpl.class b/FitnessApi/bin/src/main/java/com/revature/services/BearServiceImpl.class[m
+[1mdeleted file mode 100644[m
+[1mindex 7677b46..0000000[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/services/BearServiceImpl.class and /dev/null differ
+[1mdiff --git a/FitnessApi/bin/src/main/java/com/revature/util/DeepFieldFilter.class b/FitnessApi/bin/src/main/java/com/revature/util/DeepFieldFilter.class[m
+[1mindex e5d04f6..037239e 100644[m
+Binary files a/FitnessApi/bin/src/main/java/com/revature/util/DeepFieldFilter.class and b/FitnessApi/bin/src/main/java/com/revature/util/DeepFieldFilter.class differ
+[1mdiff --git a/FitnessApi/bin/src/test/java/com/revature/BearsApiApplicationTests.class b/FitnessApi/bin/src/test/java/com/revature/BearsApiApplicationTests.class[m
+[1mdeleted file mode 100644[m
+[1mindex 8e7d0d0..0000000[m
+Binary files a/FitnessApi/bin/src/test/java/com/revature/BearsApiApplicationTests.class and /dev/null differ
+[1mdiff --git a/FitnessApi/src/main/java/com/revature/controllers/UserController.java b/FitnessApi/src/main/java/com/revature/controllers/UserController.java[m
+[1mindex 2b823fd..a364fb8 100644[m
+[1m--- a/FitnessApi/src/main/java/com/revature/controllers/UserController.java[m
+[1m+++ b/FitnessApi/src/main/java/com/revature/controllers/UserController.java[m
+[36m@@ -117,10 +117,10 @@[m [mpublic class UserController {[m
+ [m
+ 	[m
+ 	@PostMapping[m
+[31m-	@ResponseStatus(code=HttpStatus.CREATED)[m
+[32m+[m	[32m@ResponseStatus(code=HttpStatus.CREATED)[m[41m [m
+ 	public AppUser save(@RequestBody Details userDetails) {[m
+ 		[m
+[31m-		AppUser user = new AppUser(userDetails.getUsername(), userDetails.getFullname(), userDetails.getPassword(), userDetails.getEmail());[m
+[32m+[m		[32mAppUser user = new AppUser(userDetails.getUsername(), userDetails.getPassword(), userDetails.getFullname(), userDetails.getEmail());[m
+ 		user.setSalt(""+user.hashCode());[m
+ 		[m
+ 		return userService.save(user);[m

@@ -1,0 +1,5 @@
+Home
+Submit Workout
+Rankings
+Users(admin only)
+Logout

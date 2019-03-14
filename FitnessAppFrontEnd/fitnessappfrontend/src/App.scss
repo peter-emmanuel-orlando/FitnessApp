@@ -1,0 +1,559 @@
+//colors
+$text: #FFFFFF; //dfdfd
+$link: #00FFFF;
+$test:#00FF00;
+$error: #FF0000;
+$border: solid #000000 1px;
+$transparent:rgba(0, 0, 0, 0);
+$hovered-icon:rgb(65, 105, 225);
+$selected-icon:rgba(255, 0, 242, 0.377);
+$solid-color-main: rgba(100, 25, 255, .2);
+$solid-color-background: rgba(0, 0, 0, 0.8);
+$gradient:rgba(200, 200, 255, .2), rgba(100, 25, 255, .6);
+
+
+//vars that reference other vars
+$gradient-color-up: linear-gradient(to top, $gradient);
+$gradient-color-down: linear-gradient(to bottom, $gradient);
+$fitness-blue:url("./resources/fitness-pattern-blue.jpg");
+
+//body
+body {
+  color: $text;
+}
+
+// layout
+.two-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: .5em 1.5em;
+}
+
+.one-column {
+  margin: .5em 1.5em;
+}
+
+#left-side {
+  width: 30%;
+  padding-left: 0px;
+}
+
+#right-side {
+  width: 70%;
+  padding-right: 0px;
+}
+
+.ambi-side {
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 0.5em;
+  width: 50%;
+}
+
+.box {
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 0.5em;
+  background: $gradient-color-up;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+//General styles
+.error {
+  color: $error;
+}
+
+.center {
+  text-align: center;
+}
+
+.fill-all {
+  width: 100%;
+  height: 100%;
+}
+
+  
+input {
+  max-width: 80%;
+}
+
+//Table styles
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  .lined {
+    text-align: center;
+    margin-bottom: 1em;
+  
+    tr {
+      td, th {
+          border: $border;
+          padding: 5px;
+      }
+    }
+  }
+}
+
+//Nav
+#nav {
+  display: block;
+  width:100%;
+  background-color: rgba(100, 100, 100, 0.459);
+  min-height: 3em;
+  align-items: right;
+
+  #nav-logo {
+    height: 2.7em;
+    width: 2.7em;
+    padding: .15em;
+    float: left;
+  }
+
+  #nav-items {
+    width: -webkit-calc(100% - 4em);
+    width:    -moz-calc(100% - 4em);
+    width:         calc(100% - 4em);
+    margin-left: 3em;
+    text-align: right;
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      min-height: 3em;
+      display: inline-block;
+
+      li {
+        float: left;
+        padding: 14px 16px;
+
+        a, p {
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// all pages
+#main {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background-color: $solid-color-background;
+  max-width: 70%;
+  min-width: 20rem;
+  min-height: 80%
+}
+
+a:link, a:visited {
+  color: $link;
+}
+
+#content-holder {
+  background-image: $fitness-blue;
+  width:100vw;
+  height: 100vh;
+  background-position: 50% 50%;
+}
+
+#no {
+  animation-name: scrolling-background;
+  animation-duration: 9s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  background-repeat: repeat;
+  animation-fill-mode: both;
+}
+
+@keyframes scrolling-background {
+  0% {
+    background-position: 0em 0em;
+  }
+  25% {
+    background-position:0em 2em;
+  }
+  50% {
+    background-position:2em 2em;
+  }
+  75% {
+    background-position:2em 0em;
+  }
+  100% {
+    background-position:0em 0em;
+  }
+}
+
+//Root
+#footer {
+  margin: 0em 1.5em;
+  background-color: rgba(100, 25, 255, .2);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border-radius: 25px;
+
+  a {
+    padding: 2px;
+  }
+}
+
+/////////////////////////////////////////
+// Rank Profiles
+#searchBy {
+  border-radius: 25px;
+}
+
+#searchBy:focus {
+  outline: none;
+}
+
+// Exercise chart
+#history-full {
+  margin-top: 1rem;
+  background: $gradient-color-down;
+  height: 25rem;
+  width: 40rem;
+  width: 100%;
+}
+
+#history-label {
+    height: 5%;
+}
+
+#history-holder {
+  width: 100%;
+  height: 100%;
+  max-height: calc(95% - 4rem);
+}
+
+#history-graph {
+  width: 100%;
+  height: 100%;
+
+  .highcharts-title {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Style buttons */
+.btn {
+  background-color: $transparent; /* Alpha background */
+  border: none; /* Remove borders */
+  cursor: pointer; /* Mouse pointer on hover */
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .selected {
+    background-color: $selected-icon; /* Blue background */
+    
+    img {
+      height:120%;
+      width: 120%;
+    }
+  }
+}
+
+.btn:hover {
+  background-color: $hovered-icon;
+}
+
+#workout-type-container {
+  width:100%;
+  overflow-y: visible;
+  overflow-x: auto
+}
+
+#workout-type-selector {
+  display: inline-flex;
+}
+
+
+/* width & height */
+body ::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+
+/* Track */
+body ::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background: #888;
+}
+ 
+/* Handle */
+body ::-webkit-scrollbar-thumb {
+  background: #ff0000;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+body ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+//Inspirations
+#inspirations-search {
+  float: right;
+
+  input {
+    border-radius: 25px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+
+#inspirations-full {
+  margin-top: 1rem;
+  background: $gradient-color-down;
+}
+
+#inspirations-label {
+  color:white;
+}
+
+#inspirations-holder {
+  overflow: auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height: 20rem;
+  width:100%;
+}
+
+#inspirations-rank-holder {
+  overflow: auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.inspiration-square {
+  margin: 0.5rem;
+  height: 8rem;
+  width: 8rem;
+  background-color: rgba(100, 25, 255, .3);
+  overflow: hidden;
+  text-align: center;
+  border-radius: 25px;
+
+  img {
+    transform: translate(-14%, -7%);
+    height: 140%;
+    width: 140%;
+    object-fit: cover;
+    object-position: 50% 70%;
+  }
+}
+
+//post item
+.post-item-body-img-holder {
+    width: 100%;
+}
+
+//Profile
+#content-holder {
+  width: auto;
+  height: 100vh;
+  background-repeat: repeat;
+  overflow: auto;
+}
+
+#profile-pic-holder {
+  height: 20rem;
+  margin-top:1rem;
+  display:flex;
+  justify-content: space-around;
+}
+
+.bound-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#sticky {
+  position: sticky;
+  top: 1rem;
+  padding-left: 0px;
+}
+
+#my-goals-full {
+  margin-top: 1rem;
+  background-color: rgba(100, 25, 255, .2);
+}
+
+
+#my-goals-holder {
+  overflow: auto;
+  height: 15rem;
+}
+
+
+#stats-holder {
+  height: 10rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#stats-full {
+  margin-top: 1rem;
+  background-color: rgba(100, 25, 255, .2);
+}
+
+.label {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile-pic-label {
+  margin-top: 1rem;
+}
+
+#profile-pic-full {
+  background: $gradient-color-down;
+  padding: 0.5rem;
+  height: 25rem;
+}
+
+#my-goals-holder {
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.goal-item {
+  margin: 0.5rem;
+  width: 90%;
+}
+
+#new-goal-input {
+  width: 100%;
+}
+
+#posts-holder {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#posts-full {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  background-color: rgba(100, 25, 255, .2);
+}
+
+.post-item-container {
+  position: relative;
+  display: block;
+  max-width: 30rem;
+  width: 80%;
+  min-width: 20rem;
+  min-height: 30rem;
+  margin: 2rem;
+  padding: 1rem;
+  padding-top: 80%;
+  max-height: 30rem;
+  background-color: rgba(100, 25, 255, .3);
+}
+
+.post-item-content {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+#all-profile-component div {
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+
+#all-profile-component #history-full div {
+  padding: 0;
+  border-radius: 0;
+}
+
+#all-profile-component div, img {
+  border-radius: 25px;
+}
+
+#cover-everything {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#take-pic-bounding {
+  width: 48rem;
+  height: 36rem;
+}
+
+// Edit/Delete Profile Styles
+.edit-profile {
+  margin: .5em;
+
+  input {
+    display: block;
+    width: 100%;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  button {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+
+
+

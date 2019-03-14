@@ -1,0 +1,52 @@
+users should be able to
+	create an account
+	see their profile
+		view history(in graph) by
+			Week
+			Month
+			3 month
+			All
+			activity
+	edit profile
+		update
+		update username
+		update password
+		set profile to private or public
+		*set tracked activities
+		Upload profile picture
+	delete profile
+	Login
+	log out
+	*reset password
+	view other profiles
+		if they are not private
+		or if the user is an admin
+	follow other users
+		if they are not private
+		view their history
+	input workout
+		choose exercises
+			running
+			biking
+			swimming
+			pushups
+			squats
+			curls
+			situps
+			bench press
+			deadlift
+			pullups
+	see the highest ranked public user by
+		followed
+		exercise
+	can find other users by
+		username
+		*name
+system should
+	have hashed passwords
+	have salted passwords
+	unique salts for each user
+admins should be able to
+	see all users
+	edit all users
+	delete all users

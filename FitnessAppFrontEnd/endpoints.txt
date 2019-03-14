@@ -1,0 +1,66 @@
+[Root]
+	if logged in:
+		shows splash page
+		users can see their history
+			in graph
+			users can filter what is shown
+			by
+				week
+				month
+				3 month
+				all
+		user can see who they are subscribed to
+			user can unsubscribe
+	else:
+		allows log in
+		allows account creation
+	*reset password
+/logout
+	destroys session
+/admin/users
+	admin can see all users
+/admin/users/edit/::username
+	admin can edit a user
+	admin can delete a user
+	if user exists
+/profile
+	users can see their profile
+/profile/edit
+	users can edit their profile
+		name
+		username
+		password
+		email
+		*exercises tracked
+		*users can upload pictures
+		users can set their profile to private
+/profile/delete
+	users can delete their profile WITH CONFIMATION
+/submit
+	users can submit a workout containing one or more:
+	running		Km
+	biking		Km
+	swimming	Km
+	curls		reps x lbs
+	bench press	reps x lbs
+	deadlift	reps x lbs
+	pushups		reps
+	squats		reps
+	situps		reps
+	pullups		reps
+/search
+	users can search for user based
+		username
+		*name
+	users with private profiles are not shown in search
+/users/::username
+	user can view other user
+		if user exists
+		not a private profile
+			unless admin
+	user can subscribe/unsubscribe to other user
+/rankings
+	users can see the top {5} users for
+		each exercise
+		most subscribers
+	*user can see own ranking
